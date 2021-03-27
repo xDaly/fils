@@ -26,6 +26,7 @@ import { SportComponent } from './sidebar/sport/sport.component';
 import { PreviewComponent } from './preview/preview.component';
 import { MatchComponent } from './match/match.component';
 import { TopLeagueComponent } from './top-league/top-league.component';
+import { TestdataComponent } from './testdata/testdata.component';
 
 
 
@@ -49,7 +50,8 @@ import { TopLeagueComponent } from './top-league/top-league.component';
     SportComponent,
     PreviewComponent,
     MatchComponent,
-    TopLeagueComponent
+    TopLeagueComponent,
+    TestdataComponent
   ],
   imports: [
     NgbModule,

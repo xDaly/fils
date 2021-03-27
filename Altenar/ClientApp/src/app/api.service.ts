@@ -12,9 +12,9 @@ export class APIService {
   urlc= 'http://91.134.253.18:3000/country/';
   urll= 'http://91.134.253.18:3000/leagues/';
   urlsport = 'http://91.134.253.18:3000/Sport';
-  urlsportwc = 'http://91.134.253.18:3000/Sportswithcount'
-  urlPaysByIdSports = "http://91.134.253.18:3000/country/"
-  private data = new BehaviorSubject<string>("");
+  urlsportwc = 'http://91.134.253.18:3000/Sportswithcount';
+  urlPaysByIdSports = 'http://91.134.253.18:3000/country/';
+  private data = new BehaviorSubject<string>('');
   castdata = this.data.asObservable();
 
 
@@ -24,6 +24,7 @@ export class APIService {
     this.live10ev();
     this.bestleauges();
   }
+ 
   sportlist() {
     return this.http.get(this.urlsportwc);
   }

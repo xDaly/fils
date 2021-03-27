@@ -1,3 +1,4 @@
+using Altenar.Models;
 using Altenar.Mongo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,18 @@ namespace Altenar
                 serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
             services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
 
+
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder
+                .WithOrigins("http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+            });
+            services.AddSignalR();
             services.AddControllers();
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
@@ -59,7 +72,7 @@ namespace Altenar
             {
                 app.UseSpaStaticFiles();
             }
-
+            app.UseCors("CorsPolicy");
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -67,6 +80,7 @@ namespace Altenar
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapHub<BetsHub>("/bets");
             });
 
             app.UseSpa(spa =>
