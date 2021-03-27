@@ -1,0 +1,23 @@
+<div class="_asb_expansion-panel  _asb_sports-tree-item ">
+  <div class="asb-flex-sc  _asb_sports-tree-item-header " [title]="sport.Name" (click)='GetCountries()'>
+    <i class="_asb_sport-icon asb-icon-{{sport.Name | middleDashInjector |lowercase}} _asb_sports-tree-item-header-icon "></i> 
+    <div class="asb-pos-wide asb-text _asb_sports-tree-item-header-name "  (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">{{sport.Name}}</div> 
+    <div *ngIf="sport.hasLive" class="asb-flex-cc asb-nowrap _asb_live-indicator  _asb_sports-tree-item-header-live blink">
+  Live
+  <!---->
+</div> 
+<div class="asb-text-center _asb_events-count  _asb_sports-tree-item-header-count ">{{sport.count}}</div>
+<i class="_asb_ui-icon  asb-icon-arrow-down _asb_sports-tree-item-header-expansion "  [ngClass]="isCollapsed ? ' ' : 'arr '" ></i>
+</div> <!---->
+</div>
+
+
+<div  #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div *ngIf="countries.length != 0">
+    <div class="asb-flex-col _asb_expansion-panel-content" style="transform-origin: center top;" *ngFor="let country of countries">
+      <app-country [country]="country" [sport]="sport"></app-country>
+       </div>
+  </div>
+ 
+
+</div>

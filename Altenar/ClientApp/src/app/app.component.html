@@ -1,0 +1,17 @@
+<div class="container-fluid" style="padding: 0%;overflow: hidden;">
+  <app-sportview class="d-block d-md-none"></app-sportview>
+  <div class="row">
+    <div class="col-md-2 col-xs-12 col-sm-12 btss ">
+      <app-bestleagues></app-bestleagues>
+      <app-sportlist class="d-none d-sm-block"></app-sportlist>
+    </div>
+    <div class="col-md-8 col-xs-12 col-sm-12 ">
+      <!-- <app-sportview></app-sportview> -->
+      <app-sportview class="d-none d-md-block d-lg-none d-lg-block d-xl-block"></app-sportview>
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-2 col-xs-12 col-sm-12 bts">
+      <app-betslip></app-betslip>
+    </div>
+  </div>
+</div>

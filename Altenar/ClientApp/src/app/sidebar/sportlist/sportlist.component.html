@@ -1,0 +1,18 @@
+
+
+     
+      
+      <div class="asb-flex-sc asb-flex-sc _asb_widget-header ">
+        <div class="asb-text"> Menu </div>
+      </div> 
+      <span *ngIf="isLoading" style="text-align: center;">
+        <div class="d-flex justify-content-center m-1">
+          <div class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </span>
+      
+     <div *ngFor="let sp of sportslist">
+<app-sport [sport]="sp"></app-sport>
+     </div>

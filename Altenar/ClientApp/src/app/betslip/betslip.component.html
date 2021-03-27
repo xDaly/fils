@@ -1,0 +1,271 @@
+<div class="asb-pos-wide _asb_sticky-element-content  _asb_hybrid-sticky-element-scroll-animation ">
+  <div name="fast-code" class="_asb_application-fullHD--fast-code _asb_fast-code ">
+    <div class="asb-flex-sc _asb_fast-code--widget-header _asb_widget-header ">
+      <div class="asb-text">
+        <div class="asb-flex-bc">
+          Code rapide
+          <div class="_asb_simple-button _asb_simple-button-pointer  _asb_fast-code-header-print-button ">
+            <i class="_asb_ui-icon  asb-icon-fastcode"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="_asb_fast-code-input ">
+      <div class="asb-flex-sc _asb_text-input ">
+        <input type="text" inputmode="" placeholder="Entrez le code rapide" class="asb-pos-wide _asb_text-input-input ">
+      </div>
+    </div>
+    <div class="asb-flex-sc _asb_simple-button _asb_simple-button-pointer  _asb_fast-code-rapidmode-checkbox ">
+      <div class="" style="overflow: hidden;"></div>
+      <i class="_asb_ui-icon _asb_ui-icon---checkbox-empty  asb-icon-checkbox-empty"></i>
+      Utilisez le mode rapide
+    </div>
+  </div>
+
+  <div name="mybets-betslip-selector" *ngIf="listData.length > 1"
+    class="_asb_application-fullHD--mybets-betslip-selector _asb_mybets-betslip-selector ">
+    <div class="_asb_items-tabs-header ">
+      <div class="asb-cut asb-pos-wide _asb_items-scroller ">
+        <div class="_asb_content-scroller ">
+          <div class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_content-scroller-arrow "
+            style="left: 0px; display: none;">
+            <i class="_asb_ui-icon  asb-icon-arrow-left _asb_content-scroller-arrow-icon "></i>
+          </div>
+          <div class="" style="overflow: hidden;">
+            <div class="asb-scrollable asb-flex-cc _asb_content-scroller-wrapper-scrollable ">
+              <div
+                class="asb-flex-cc asb-pos-tall asb-nowrap _asb_mybets-betslip-selector-header--simple-button-selected _asb_items-tabs-tab--simple-button-selected _asb_simple-button _asb_simple-button-selected _asb_simple-button-pointer  _asb_mybets-betslip-selector-header--items-tabs-tab _asb_items-tabs-tab  asb-pos-wide"
+                title="Betslip">
+                <div class="" style="overflow: hidden;"></div> <span class="asb-text">
+                  Fiche de pari
+                </span>
+                <div
+                  class="asb-flex-cc asb-unshrink _asb_mybets-betslip-selector-selections-indicator _asb_mybets-betslip-selector-selections-indicator-selected ">
+                  1
+                </div>
+              </div>
+            </div>
+            <div class="_asb_items-tabs-indicator _asb_items-tabs-indicator-selected "></div>
+
+          </div>
+          <div class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_content-scroller-arrow "
+            style="right: 0px; display: none;">
+            <div class="" style="overflow: hidden;"></div>
+            <i
+              class="_asb_ui-icon _asb_ui-icon---arrow-right  asb-icon-arrow-right _asb_content-scroller-arrow-icon "></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="_asb_items-tabs-content ">
+      <div class="asb-cut">
+        <div>
+          <div name="betslip" class="_asb_betslip ">
+            <div class="asb-flex-col" style="transform-origin: center top;">
+              <div style="transform-origin: center top;">
+                <div class="_asb_items-tabs-header ">
+                  <div class="asb-cut asb-pos-wide _asb_items-scroller ">
+                    <div class="_asb_content-scroller ">
+                      <div
+                        class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_betslip-modes-menu--content-scroller-arrow _asb_content-scroller-arrow "
+                        style="left: 0px; display: none;">
+                        <div class="" style="overflow: hidden;"></div> <i
+                          class="_asb_ui-icon  asb-icon-arrow-left _asb_content-scroller-arrow-icon "></i>
+                      </div>
+                      <div class="asb-scrollable asb-flex-cc _asb_content-scroller-wrapper-scrollable  ">
+                        <div
+                          class="asb-flex-cc asb-pos-tall asb-nowrap asb-pos-stretch-main _asb_betslip-modes-menu--simple-button-selected _asb_items-tabs-tab--simple-button-selected _asb_simple-button _asb_simple-button-selected _asb_simple-button-pointer  _asb_items-tabs-tab "
+                          role="betslip-modes-menu-multiple" title="Simple">
+                          Simple
+                        </div>
+
+                        <div
+                          class="asb-flex-cc asb-pos-tall asb-nowrap asb-pos-stretch-main _asb_simple-button _asb_simple-button-pointer  _asb_items-tabs-tab "
+                          role="betslip-modes-menu-system" title="Combiné">
+                          <div class="" style="overflow: hidden;"></div>
+                          Combiné
+                          <!-- <div class="_asb_items-tabs-indicator "></div> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_betslip-modes-menu--content-scroller-arrow _asb_content-scroller-arrow "
+                      style="right: 0px; display: none;">
+                      <div class="" style="overflow: hidden;"></div>
+                      <i
+                        class="_asb_ui-icon _asb_ui-icon---arrow-right  asb-icon-arrow-right _asb_content-scroller-arrow-icon "></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_asb_betslip-selection-items ">
+                <div class="_asb_betslip-selection-item " style="transform-origin: center top;"
+                  *ngFor="let d of listData; let index = index">
+                  <div class="asb-flex" *ngIf="d!=''">
+                    <div class="asb-flex-col asb-flex-col asb-pos-stretch-main _asb_betslip-selection-item-content ">
+                      <div class="asb-flex-ss">
+                        <div class="asb-flex-col asb-pos-wide">
+                          <div class="asb-flex-ss">
+                            <div class="_asb_betslip-selection-item-content-event-code ">
+                              2371
+                            </div>
+                            <div
+                              class="asb-flex-col asb-text _asb_betslip-selection-item--betslip-selection-item-event-name _asb_betslip-selection-item-event-name ">
+                              <div title="Belgique vs. Russie" class="">Belgique vs. Russie</div>
+                            </div>
+                          </div>
+                          <div class="_asb_betslip-selection-item-market-name ">1X2</div>
+                        </div>
+                        <div
+                          class="asb-flex-ss asb-unshrink _asb_simple-button _asb_simple-button-pointer  _asb_betslip-selection-item-close-button ">
+                          <div class="" style="overflow: hidden;"></div>
+                          <i class="_asb_ui-icon _asb_ui-icon---close-betslip  asb-icon-close-betslip"
+                            (click)="deleteElemnt(index)"></i>
+                        </div>
+                      </div>
+                      <div class="asb-flex-sc">
+                        <div class="asb-pos-stretch-main asb-text _asb_betslip-selection-item-name ">1</div>
+                        <div class="_asb_betslip-selection-item-odd ">
+                          <div class="asb-flex-sc">
+                            <span>{{d}}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_asb_betslip-clear-all "  (click)="deletAll()">
+                <div class="asb-flex-ec _asb_simple-button _asb_simple-button-pointer ">
+                  <div class="" style="overflow: hidden;"></div> <span>Tout effacer</span> <i
+                    class="_asb_ui-icon _asb_ui-icon---close-betslip  asb-icon-close-betslip"></i>
+                </div>
+              </div>
+              <div class="asb-flex-sc asb-flex-col _asb_betslip-lines-accumulator ">
+                <div class="asb-flex-sc asb-full-width">
+                  <div class="asb-flex-col asb-pos-stretch-main"><span class="asb-text">Seul</span>
+                  </div>
+
+                  <div class="asb-flex-cc _asb_betslip-lines-multiplier "><span class="">1</span><span class="">x</span>
+                  </div>
+                  <div class="asb-flex-sc _asb_betslip-lines-accumulator--text-input _asb_text-input ">
+                    <div class="_asb_text-input-prefix "></div> <input type="text" inputmode="numeric"
+                      class="asb-pos-wide _asb_text-input-input ">
+                  </div>
+                </div>
+              </div>
+              <div class="" style="position: static;">
+                <div class="asb-flex-sc _asb_betslip-total-odds "><span class="asb-pos-stretch-main">Cotes
+                    totales</span> <span role="betslip-total-odds" class="_asb_betslip-total-odds-count ">1.71</span>
+                </div>
+                <div class="asb-flex-col">
+                  <div class="asb-flex-sc _asb_betslip-totals-stake "><span class="asb-pos-stretch-main asb-text">Mise
+                      totale</span>
+                    <div class="asb-nowrap _asb_betslip-totals-stake--currency _asb_currency "
+                      role="betslip-totals-stake">2.00</div>
+                  </div>
+                  <div class="asb-flex-sc _asb_betslip-totals-win "><span class="asb-pos-stretch-main asb-text">Gain
+                      total</span>
+                    <div class="asb-nowrap _asb_betslip-totals-win--currency _asb_currency " role="betslip-totals-win">
+                      3.42</div>
+                  </div>
+                </div>
+                <div class="asb-flex-col _asb_betslip-place-btns ">
+                  <div
+                    class="asb-text-center asb-pos-stretch-main _asb_simple-button _asb_simple-button-pointer  _asb_betslip-place-btns-bet "
+                    role="betslip-place-btns-bet">
+                    <div class="" style="overflow: hidden;"></div> Placer un pari
+                  </div>
+                  <div
+                    class="asb-text-center asb-pos-stretch-main _asb_simple-button _asb_simple-button-pointer  _asb_betslip-place-btns-book "
+                    role="betslip-place-btns-book">
+                    <div class="" style="overflow: hidden;"></div> Réserver
+                  </div>
+                </div>
+              </div>
+              <div class="_asb_expansion-panel  _asb_betslip-odds-change-action-select ">
+                <div
+                  class="asb-flex-sc  _asb_simple-button _asb_simple-button-pointer  _asb_betslip-odds-change-action-select--expansion-panel-header _asb_expansion-panel-header ">
+                  <div class="asb-pos-wide">
+                    <div class="asb-text-center"><i class="_asb_ui-icon  asb-icon-cog-1"></i> <span
+                        class="asb-text">Demande toujours le changement des cotes</span></div>
+                  </div> <i class="_asb_ui-icon  asb-icon-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="listData.length <= 1" name="mybets-betslip-selector"
+    class="_asb_application-fullHD--mybets-betslip-selector _asb_mybets-betslip-selector ">
+    <!---->
+    <div class="_asb_items-tabs-header ">
+      <div class="asb-cut asb-pos-wide _asb_items-scroller ">
+        <div class="_asb_content-scroller ">
+          <div class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_content-scroller-arrow "
+            style="left: 0px; display: none;">
+            <div class="" style="overflow: hidden;"></div> <i
+              class="_asb_ui-icon  asb-icon-arrow-left _asb_content-scroller-arrow-icon "></i>
+          </div>
+          <div class="" style="overflow: hidden;">
+            <div class="asb-scrollable asb-flex-cc _asb_content-scroller-wrapper-scrollable ">
+              <div
+                class="asb-flex-cc asb-pos-tall asb-nowrap _asb_mybets-betslip-selector-header--simple-button-selected _asb_items-tabs-tab--simple-button-selected _asb_simple-button _asb_simple-button-selected _asb_simple-button-pointer  _asb_mybets-betslip-selector-header--items-tabs-tab _asb_items-tabs-tab  asb-pos-wide"
+                title="Betslip">
+                <div class="" style="overflow: hidden;"></div> <span class="asb-text">
+                  Fiche de pari
+                </span>
+                <!---->
+                <!---->
+              </div>
+              
+              <!---->
+            </div>
+            <div class="_asb_items-tabs-indicator _asb_items-tabs-indicator-selected "></div>
+
+          </div>
+          <div class="asb-flex-cc _asb_simple-button _asb_simple-button-pointer  _asb_content-scroller-arrow "
+            style="right: 0px; display: none;">
+            <div class="" style="overflow: hidden;"></div> <i
+              class="_asb_ui-icon _asb_ui-icon---arrow-right  asb-icon-arrow-right _asb_content-scroller-arrow-icon "></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="_asb_items-tabs-content ">
+      <div class="asb-cut">
+        <div>
+          <div name="betslip" class="_asb_betslip ">
+            <div class="asb-text-center asb-text asb-flex-col _asb_betslip-empty ">Pas de sélections sur la fiche de
+              pari</div>
+          </div>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="listData.length <= 1" name="reservation-code"
+    class="asb-flex-col _asb_application-fullHD--reservation-code _asb_reservation-code ">
+    <div class="asb-flex-sc _asb_widget-header ">
+      <div class="asb-text">Code de réservation</div>
+    </div>
+    <div class="" style="position: static;">
+      <!---->
+      <!---->
+      <div class="_asb_reservation-code-input ">
+        <div class="asb-flex-sc _asb_text-input ">
+          <!---->
+          <div class="_asb_text-input-prefix "></div> <input type="text" inputmode=""
+            placeholder="Entrez le numéro de réservation de pari"
+            class="asb-pos-wide _asb_reservation-code-input--text-input-input _asb_text-input-input ">
+          <div class="_asb_text-input-postfix "></div> <i class="_asb_ui-icon  asb-icon-search"></i>
+          <!---->
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>

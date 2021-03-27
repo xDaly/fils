@@ -1,0 +1,28 @@
+<div class="asb-flex-col  _asb_expansion-panel  _asb_leagues-selector " name="leagues-selector">
+  <div class="asb-flex-sc _asb_leagues-selector-header " title="Europe" (click)="GetLeagues()">
+    <div class="asb-flex-cc  _asb_simple-button _asb_simple-button-pointer ">
+      <div class="" style="overflow: visible;">
+      </div> 
+      <i  class="_asb_ui-icon _asb_ui-icon---checkbox-checked  asb-icon-checkbox-empty _asb_leagues-selector-header-checkbox " (click)="clickEvent()"   [ngClass]="status  ? 'asb-icon-checkbox-empty' : 'asb-icon-checkbox-checked'" ></i>
+    </div> 
+    <div class="_asb_category-flag-or-sport-icon  _asb_leagues-selector-header-icon ">
+      <i class="_asb_flag-icon asb-flag-icon-{{country.name | lowercase }} asb-flag-icon"></i>
+    </div> 
+    <div class="asb-pos-wide asb-text _asb_leagues-selector-header-name " (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">{{country.name}}</div> 
+    <!----> 
+    <div class="asb-text-center _asb_events-count  _asb_leagues-selector-header-count ">208</div> 
+    <i class="_asb_ui-icon  asb-icon-arrow-down _asb_leagues-selector-header-expansion ">
+    </i>
+  </div>
+   <!---->
+</div>
+
+<div  #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div *ngIf="leagues.length != 0">
+    <div class="asb-flex-col _asb_expansion-panel-content" style="transform-origin: center top;" *ngFor="let league of leagues">
+      <app-leagues [country]="country" [sport]="sport" [league]="league"></app-leagues>
+       </div>
+  </div>
+ 
+
+</div>
