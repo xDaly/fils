@@ -1,3 +1,4 @@
+using Altenar.Extensions;
 using Altenar.Models;
 using Altenar.Mongo;
 using Microsoft.AspNetCore.Builder;
@@ -50,6 +51,8 @@ namespace Altenar
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.InitializeRedis(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
