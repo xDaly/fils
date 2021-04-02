@@ -12,7 +12,7 @@ namespace Altenar.Config
         public string Password { get; set; }
         public string GetConnectionString()
         {
-            return HostName + ":" + Port + "," + Password + ",ssl = True,abortConnect = False";
+            return HostName + ":" + Port + ",password=" + Password + ",ssl=false,abortConnect=False";
         }
 
     }

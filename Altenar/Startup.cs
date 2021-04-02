@@ -1,6 +1,7 @@
 using Altenar.Extensions;
 using Altenar.Models;
 using Altenar.Mongo;
+using Altenar.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +47,7 @@ namespace Altenar
             services.AddSignalR();
             services.AddControllers();
             services.AddControllersWithViews();
+            services.AddSingleton(typeof(ISignalService), typeof(SignalService));
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -86,6 +88,7 @@ namespace Altenar
                 endpoints.MapHub<BetsHub>("/bets");
             });
 
+
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
@@ -98,6 +101,8 @@ namespace Altenar
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            app.StartRedis();
+
         }
     }
 }
